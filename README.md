@@ -37,3 +37,11 @@ Semua soal dihasilkan dari data aplikasi sendiri; cerita buatan sendiri. Tidak a
 - **Kotoba Bab 1–50**: `data/kotoba.js` kini berisi kotoba dari PDF *Kotoba Minna no Nihongo Bab 1–50* (label `Bab N`), ditambah kata katalog lama di luar buku berlabel `Tambahan`. Kategori (Kata benda/kerja/sifat/ungkapan) otomatis dari pola kata, bisa keliru. Beberapa kata Bab 50 di PDF tidak punya arti (dibiarkan kosong dan tidak dipakai dalam kuis).
 - **Kanji**: `data/kanji.js` mengikuti PDF JLPT kanji.sh: N5 103, N4 181, N3 361 (+182 kanji tambahan berlabel N3+). Bacaan onyomi/kunyomi dari PDF. Arti bahasa Indonesia ditulis ulang; contoh kata tersedia hanya untuk kanji lama (197 kanji baru belum punya contoh).
 - **Jalur kanji**: dibangun ulang dari daftar PDF: N5 103 → Jembatan 17 → N4 164 (19 tahap).
+
+## Pembaruan terbaru (v11)
+- **Kotoba**: jenis kata dikoreksi ulang (data/kotoba.js): kata benda 1650, kata kerja 1037, sifat い 87, sifat な 55, keterangan 46, ungkapan 103, konjungsi 10, kata ganti 3. Memilih satu jenis hanya menampilkan jenis itu. Bacaan yang tercampur catatan ［...］ dibersihkan, 64 entri kembar dibuang, dan beberapa salah ketik hasil konversi PDF diperbaiki (行ます→行きます, お世話になりす→お世話になります, いらしゃいませ→いらっしゃいませ, ダイニングキチン→ダイニングキッチン). Klasifikasi berbasis aturan + daftar, bukan kamus resmi: periksa kata yang meragukan.
+- **Rentang bab**: di Kotoba dan di Latihan bisa memilih "Bab X sampai Bab Y" (atau Tambahan), digabung dengan jenis kata; tombol "Latihan · Bab 1–5 · jenis" langsung memulai kuis dari kata-kata itu. Pilihan tersimpan (kunci nqrange).
+- **Latihan** jadi hub kartu: Kanji, Kotoba (kata benda / kata sifat / kata kerja / campur), JFT, Kaiwa, Cerita, dan Pusat Kuis.
+- **Materi** jadi hub kategori: Pelajaran Bab 1–50, Bunpou, Partikel, Kata kerja, Kotoba, Kanji. Bunpou dipindah ke sini (tombol kembali menuju Materi).
+- **Beranda**: jalur belajar 3 langkah (Belajar Materi, Hafalan, Latihan) menggantikan 9 tombol menu.
+- File baru: v11.js, v11.css. Service worker naik ke nq-v7 (buka aplikasi lalu muat ulang sekali-dua kali agar versi baru terpakai).
